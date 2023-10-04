@@ -1,10 +1,10 @@
 <div class="calculator" [ngClass]="{'night-mode': historyService.isNightMode()}">
   <span class="mode">
     <button (click)="toggleNightMode()" class="changeMode">
-      <img [src]="historyService.isNightMode() ? '../../assets/icon/brightness.png' : '../../assets/icon/night-mode.png'" class="changeModeIcon">
+      <img [src]="historyService.isNightMode() ? '../calculator-practice/assets/icon/brightness.png' : '../calculator-practice/assets/icon/night-mode.png'" class="changeModeIcon">
     </button>
     <button (click)="navigateToHistory()" class="history">
-      <img src="../../assets/icon/history.png" class="historyIcon">
+      <img src="../calculator-practice/assets/icon/history.png" class="historyIcon">
     </button>
   </span>
   <input type="text" id="display" [(ngModel)]="currentInput" readonly>
