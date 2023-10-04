@@ -98,7 +98,12 @@
     background-color: #333;
     color: #fff;
 
-    button {
+    .buttons button {
+      background-color: #555 !important;
+      color: #fff !important;
+    }
+    
+    .memory-buttons button {
       background-color: #555;
       color: #fff;
       &:disabled {
@@ -106,12 +111,6 @@
         color: #aaa !important;
       }
     }
-    
-    .memory-buttons button {
-      background-color: #555;
-      color: #fff;
-    }
-
     .mode {
      .changeMode,
      .history {
