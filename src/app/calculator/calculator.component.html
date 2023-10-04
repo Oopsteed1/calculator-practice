@@ -1,0 +1,38 @@
+<div class="calculator" [ngClass]="{'night-mode': historyService.isNightMode()}">
+  <span class="mode">
+    <button (click)="toggleNightMode()" class="changeMode">
+      <img [src]="historyService.isNightMode() ? '../../assets/icon/brightness.png' : '../../assets/icon/night-mode.png'" class="changeModeIcon">
+    </button>
+    <button (click)="navigateToHistory()" class="history">
+      <img src="../../assets/icon/history.png" class="historyIcon">
+    </button>
+  </span>
+  <input type="text" id="display" [(ngModel)]="currentInput" readonly>
+  <div class="memory-buttons">
+    <button (click)="ms()">MS</button>
+    <button (click)="mr()" [disabled]="isMemoryEmpty">MR</button>
+    <button (click)="mc()" [disabled]="isMemoryEmpty">MC</button>
+    <button (click)="addToMemory()">M+</button>
+    <button (click)="minusFromMemory()">M-</button>
+  </div>
+  <div class="buttons">
+    <button (click)="clear()">C</button>
+    <button (click)="numberClick('7')">7</button>
+    <button (click)="numberClick('8')">8</button>
+    <button (click)="numberClick('9')">9</button>
+    <button (click)="numberClick('+')">+</button>
+    <button (click)="numberClick('4')">4</button>
+    <button (click)="numberClick('5')">5</button>
+    <button (click)="numberClick('6')">6</button>
+    <button (click)="numberClick('-')">-</button>
+    <button (click)="numberClick('1')">1</button>
+    <button (click)="numberClick('2')">2</button>
+    <button (click)="numberClick('3')">3</button>
+    <button (click)="numberClick('*')">*</button>
+    <button (click)="numberClick('0')">0</button>
+    <button (click)="calculate()">=</button>
+    <button (click)="numberClick('/')">/</button>
+  </div>
+
+
+</div>

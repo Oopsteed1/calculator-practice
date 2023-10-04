@@ -1,0 +1,17 @@
+<div class="history" [ngClass]="{'night-mode': historyService.isNightMode()}">
+  <h2>History</h2>
+  <span class="mode">
+    <button (click)="toggleNightMode()" class="changeMode">
+      <img [src]="historyService.isNightMode() ? '../../assets/icon/brightness.png' : '../../assets/icon/night-mode.png'" class="changeModeIcon">
+    </button>
+    <button class="back" (click)="navigateToCalculator()">
+      <img src="../../assets/icon/back.png" class="backIcon">
+    </button>
+  </span>
+  <ul>
+    <li class="result" *ngFor="let calculation of calculationHistory">{{ calculation }}</li>
+  </ul>
+  <div class="clear-button-container"> <!-- 清除按钮容器 -->
+    <button class="clear-button" *ngIf="calculationHistory.length > 0" (click)="clearHistory()">Clear History</button>
+  </div>
+</div>
