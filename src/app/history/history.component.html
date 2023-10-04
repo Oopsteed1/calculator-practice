@@ -11,7 +11,7 @@
   <ul>
     <li class="result" *ngFor="let calculation of calculationHistory">{{ calculation }}</li>
   </ul>
-  <div class="clear-button-container"> <!-- 清除按钮容器 -->
+  <div class="clear-button-container">
     <button class="clear-button" *ngIf="calculationHistory.length > 0" (click)="clearHistory()">Clear History</button>
   </div>
 </div>

@@ -88,10 +88,9 @@
         color: #fff;
       }
       &:disabled {
-        background-color: #ccc; /* 禁用状态的背景颜色 */
-        color: #666; /* 禁用状态的文本颜色 */
-        cursor: not-allowed; /* 禁用状态的光标样式 */
-        /* 可以根据需要添加其他样式属性 */
+        background-color: #ccc;
+        color: #666;
+        cursor: not-allowed;
       }
     }
   }
@@ -99,11 +98,15 @@
     background-color: #333;
     color: #fff;
 
-    .buttons button {
+    button {
       background-color: #555;
       color: #fff;
+      &:disabled {
+        background-color: #222 !important;
+        color: #aaa !important;
+      }
     }
-
+    
     .memory-buttons button {
       background-color: #555;
       color: #fff;
